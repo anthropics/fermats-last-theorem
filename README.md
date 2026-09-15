@@ -54,6 +54,8 @@ each intermediate theorem means what its name suggests; that is for the reader t
 the Lean theorem behind each step and states exactly how strong each named classical result is as proved here.
 
 ## Reading the proof in a browser
+The documentation is hosted at [Documentation Website](https://tianyipeng.github.io/fermats-last-theorem/).
+You can also browse them locally from the `html/` folder of this repository, as follows.
 
 The `html/` folder (about 390 MB) presents this repository as static web pages: the route of the proof step by step;
 a page for each of the 29,511 theorems (the exact Lean statement, what it cites and what cites it, and an expandable
