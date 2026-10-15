@@ -56,7 +56,7 @@ cp "$HERE/Challenge.lean" "$HERE/Solution.lean" "$HERE/lakefile.toml" "$HERE/con
 for r in "$ROOT/.lake/build/lib/lean" "$ROOT"/.lake/packages/*/.lake/build/lib/lean; do
   for e in "$r"/*; do b=$W/.lake/build/lib/lean/$(basename "$e")
     if [ -L "$b" ] && [ "$(readlink "$b")" = "$e" ]; then continue; fi
-    ln -sn "$e" "$b" 2>/dev/null || log "WARNING: name collision in the symlink farm: $e (kept $(readlink "$b"))"; done; done
+    ln -sn "$e" "$b" 2>/dev/null || { log "ERROR: name collision in the symlink farm: $e (existing $(readlink "$b")). Use a fresh WORK directory."; exit 2; }; done; done
 [ -e "$W/.lake/build/lib/lean/Mathlib.olean" ] || { log "ERROR: Mathlib.olean not found under $ROOT/.lake/packages - is the tree built?"; exit 2; }
 # 5. run
 cd "$W"; unset LEAN_PATH
