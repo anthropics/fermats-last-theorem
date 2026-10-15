@@ -1,6 +1,6 @@
 # Verification work-directory regression
 
-This test uses tiny built Lean projects and the unchanged comparator runner. It
+This test uses tiny built Lean projects and the repository's comparator runner. It
 needs Python 3, Lean 4.33.1 on `PATH`, and the two comparator/exporter source
 checkouts built as described in `verification/comparator/run.sh`:
 

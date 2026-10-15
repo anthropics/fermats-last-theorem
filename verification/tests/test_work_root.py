@@ -1,6 +1,6 @@
 """Deterministic regression for WORK reuse across built Lean checkouts.
 
-Uses the unchanged Anthropic runner and real comparator/exporter/Lean binaries.
+Uses the repository's runner and real comparator/exporter/Lean binaries.
 Set COMPARATOR_SRC and LEAN4EXPORT_SRC to built v4.33.0 checkouts and put
 Lean 4.33.1's lake/lean on PATH. No Hypothesis or full FLT build is required.
 ANTHROPIC_RUNNER can select a candidate repair for the same assertions.
